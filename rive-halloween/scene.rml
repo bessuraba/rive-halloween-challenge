@@ -1,0 +1,559 @@
+<Rive version="1" kind="fragment">
+    <Artboard defaultStateMachineId="0:7" viewModelId="0:90" styleId="0:5" clip="true" width="500" height="500" name="Lurker" id="0:2">
+        <LayoutComponentStyle name="Artboard Style" id="0:5"/>
+
+        <!-- ===== FOREGROUND FOG (drawn first = on top) ===== -->
+        <Shape x="120" y="470" scaleY="0.28" opacity="0.7" name="Fog Front A" id="0:60">
+            <Ellipse width="400" height="400" originX="0.5" originY="0.5" name="Path"/>
+            <Fill name="Fill">
+                <RadialGradient startX="0" startY="0" endX="200" endY="0" name="G">
+                    <GradientStop colorValue="AA8D7BC0" position="0"/>
+                    <GradientStop colorValue="00643F9C" position="1"/>
+                </RadialGradient>
+            </Fill>
+        </Shape>
+        <Shape x="390" y="480" scaleY="0.26" opacity="0.65" name="Fog Front B" id="0:61">
+            <Ellipse width="440" height="440" originX="0.5" originY="0.5" name="Path"/>
+            <Fill name="Fill">
+                <RadialGradient startX="0" startY="0" endX="220" endY="0" name="G">
+                    <GradientStop colorValue="AA7E6CB4" position="0"/>
+                    <GradientStop colorValue="00643F9C" position="1"/>
+                </RadialGradient>
+            </Fill>
+        </Shape>
+
+        <!-- ===== THE LURKER ===== -->
+        <Node x="250" y="300" name="Lurker" id="0:20">
+
+            <!-- transparent hover target covering the whole creature -->
+            <Shape x="0" y="40" name="Hit Area" id="0:22">
+                <Rectangle width="250" height="400" originX="0.5" originY="0.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="00000000" name="C"/></Fill>
+            </Shape>
+
+            <!-- Head (drawn before body = in front of it) -->
+            <Node x="0" y="-92" name="Head" id="0:30">
+
+                <!-- Mouth -->
+                <Node x="0" y="34" name="Mouth" id="0:50">
+                    <!-- teeth, pointing down from the upper lip -->
+                    <Shape x="-42" y="-2" rotation="3.14159" name="Tooth 1">
+                        <Triangle width="9" height="15" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FFEDE6D2" name="C"/></Fill>
+                    </Shape>
+                    <Shape x="-30" y="5" rotation="3.14159" name="Tooth 2">
+                        <Triangle width="10" height="18" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FFEDE6D2" name="C"/></Fill>
+                    </Shape>
+                    <Shape x="-17" y="9" rotation="3.14159" name="Tooth 3">
+                        <Triangle width="10" height="16" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FFEDE6D2" name="C"/></Fill>
+                    </Shape>
+                    <Shape x="-5" y="11" rotation="3.14159" name="Tooth 4">
+                        <Triangle width="10" height="20" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FFEDE6D2" name="C"/></Fill>
+                    </Shape>
+                    <Shape x="7" y="11" rotation="3.14159" name="Tooth 5">
+                        <Triangle width="10" height="20" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FFEDE6D2" name="C"/></Fill>
+                    </Shape>
+                    <Shape x="19" y="9" rotation="3.14159" name="Tooth 6">
+                        <Triangle width="10" height="16" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FFEDE6D2" name="C"/></Fill>
+                    </Shape>
+                    <Shape x="32" y="5" rotation="3.14159" name="Tooth 7">
+                        <Triangle width="10" height="18" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FFEDE6D2" name="C"/></Fill>
+                    </Shape>
+                    <Shape x="44" y="-2" rotation="3.14159" name="Tooth 8">
+                        <Triangle width="9" height="15" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FFEDE6D2" name="C"/></Fill>
+                    </Shape>
+                    <!-- the grin itself: a wide dark crescent -->
+                    <Shape name="Grin">
+                        <PointsPath isClosed="true" isClockwise="true" name="Path">
+                            <StraightVertex x="-58" y="-14" radius="6"/>
+                            <StraightVertex x="-30" y="2"/>
+                            <StraightVertex x="0" y="6"/>
+                            <StraightVertex x="30" y="2"/>
+                            <StraightVertex x="58" y="-14" radius="6"/>
+                            <StraightVertex x="34" y="26" radius="14"/>
+                            <StraightVertex x="0" y="34" radius="14"/>
+                            <StraightVertex x="-34" y="26" radius="14"/>
+                        </PointsPath>
+                        <Fill name="Fill"><SolidColor colorValue="FF1B0610" name="C"/></Fill>
+                    </Shape>
+                </Node>
+
+                <!-- Left eye -->
+                <Node x="-34" y="-6" name="Eye L" id="0:41">
+                    <Shape name="Pupil L" id="0:45">
+                        <Ellipse width="6" height="22" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FF050308" name="C"/></Fill>
+                    </Shape>
+                    <Shape name="Iris L">
+                        <Ellipse width="34" height="24" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FFD4FF3F" name="C"/></Fill>
+                    </Shape>
+                    <Shape name="Glow L" id="0:43">
+                        <Ellipse width="84" height="84" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill">
+                            <RadialGradient startX="0" startY="0" endX="42" endY="0" name="G">
+                                <GradientStop colorValue="CCC8FF2A" position="0"/>
+                                <GradientStop colorValue="00C8FF2A" position="1"/>
+                            </RadialGradient>
+                        </Fill>
+                    </Shape>
+                </Node>
+
+                <!-- Right eye -->
+                <Node x="34" y="-6" name="Eye R" id="0:42">
+                    <Shape name="Pupil R" id="0:46">
+                        <Ellipse width="6" height="22" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FF050308" name="C"/></Fill>
+                    </Shape>
+                    <Shape name="Iris R">
+                        <Ellipse width="34" height="24" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill"><SolidColor colorValue="FFD4FF3F" name="C"/></Fill>
+                    </Shape>
+                    <Shape name="Glow R" id="0:44">
+                        <Ellipse width="84" height="84" originX="0.5" originY="0.5" name="Path"/>
+                        <Fill name="Fill">
+                            <RadialGradient startX="0" startY="0" endX="42" endY="0" name="G">
+                                <GradientStop colorValue="CCC8FF2A" position="0"/>
+                                <GradientStop colorValue="00C8FF2A" position="1"/>
+                            </RadialGradient>
+                        </Fill>
+                    </Shape>
+                </Node>
+
+                <!-- Horns / ears -->
+                <Shape x="-56" y="-62" rotation="-0.45" name="Horn L">
+                    <Triangle width="30" height="58" originX="0.5" originY="0.5" name="Path"/>
+                    <Fill name="Fill"><SolidColor colorValue="FF0C0A14" name="C"/></Fill>
+                </Shape>
+                <Shape x="56" y="-62" rotation="0.45" name="Horn R">
+                    <Triangle width="30" height="58" originX="0.5" originY="0.5" name="Path"/>
+                    <Fill name="Fill"><SolidColor colorValue="FF0C0A14" name="C"/></Fill>
+                </Shape>
+
+                <!-- Skull -->
+                <Shape name="Skull">
+                    <Ellipse width="150" height="132" originX="0.5" originY="0.5" name="Path"/>
+                    <Fill name="Fill"><SolidColor colorValue="FF0C0A14" name="C"/></Fill>
+                    <Stroke thickness="2.5" name="Rim">
+                        <SolidColor colorValue="FF7A5CE0" name="C"/>
+                    </Stroke>
+                </Shape>
+            </Node>
+
+            <!-- Arms (pivot at the shoulder so they can swing) -->
+            <Node x="-84" y="-18" rotation="0.05" name="Arm L" id="0:70">
+                <Shape name="Arm L Bone">
+                    <PointsPath isClosed="false" name="Path">
+                        <StraightVertex x="0" y="0"/>
+                        <StraightVertex x="-14" y="62" radius="30"/>
+                        <StraightVertex x="-6" y="128" radius="30"/>
+                    </PointsPath>
+                    <Stroke thickness="5" cap="round" join="round" name="Stroke">
+                        <SolidColor colorValue="FFD8D0BC" name="C"/>
+                    </Stroke>
+                </Shape>
+                <Shape x="-6" y="128" name="Claws L">
+                    <PointsPath isClosed="false" name="Path">
+                        <StraightVertex x="-12" y="26"/>
+                        <StraightVertex x="0" y="0"/>
+                        <StraightVertex x="0" y="30"/>
+                        <StraightVertex x="0" y="0"/>
+                        <StraightVertex x="13" y="24"/>
+                    </PointsPath>
+                    <Stroke thickness="3.5" cap="round" join="round" name="Stroke">
+                        <SolidColor colorValue="FFD8D0BC" name="C"/>
+                    </Stroke>
+                </Shape>
+            </Node>
+            <Node x="84" y="-18" rotation="-0.05" name="Arm R" id="0:71">
+                <Shape name="Arm R Bone">
+                    <PointsPath isClosed="false" name="Path">
+                        <StraightVertex x="0" y="0"/>
+                        <StraightVertex x="14" y="62" radius="30"/>
+                        <StraightVertex x="6" y="128" radius="30"/>
+                    </PointsPath>
+                    <Stroke thickness="5" cap="round" join="round" name="Stroke">
+                        <SolidColor colorValue="FFD8D0BC" name="C"/>
+                    </Stroke>
+                </Shape>
+                <Shape x="6" y="128" name="Claws R">
+                    <PointsPath isClosed="false" name="Path">
+                        <StraightVertex x="12" y="26"/>
+                        <StraightVertex x="0" y="0"/>
+                        <StraightVertex x="0" y="30"/>
+                        <StraightVertex x="0" y="0"/>
+                        <StraightVertex x="-13" y="24"/>
+                    </PointsPath>
+                    <Stroke thickness="3.5" cap="round" join="round" name="Stroke">
+                        <SolidColor colorValue="FFD8D0BC" name="C"/>
+                    </Stroke>
+                </Shape>
+            </Node>
+
+            <!-- Tattered cloak body -->
+            <Shape name="Cloak" id="0:21">
+                <PointsPath isClosed="true" isClockwise="true" name="Path">
+                    <StraightVertex x="-34" y="-62" radius="20"/>
+                    <StraightVertex x="34" y="-62" radius="20"/>
+                    <StraightVertex x="96" y="-6" radius="30"/>
+                    <StraightVertex x="112" y="100"/>
+                    <StraightVertex x="100" y="176"/>
+                    <StraightVertex x="72" y="138"/>
+                    <StraightVertex x="50" y="186"/>
+                    <StraightVertex x="22" y="144"/>
+                    <StraightVertex x="0" y="192"/>
+                    <StraightVertex x="-22" y="144"/>
+                    <StraightVertex x="-50" y="186"/>
+                    <StraightVertex x="-72" y="138"/>
+                    <StraightVertex x="-100" y="176"/>
+                    <StraightVertex x="-112" y="100"/>
+                    <StraightVertex x="-96" y="-6" radius="30"/>
+                </PointsPath>
+                <Fill name="Fill">
+                    <LinearGradient startX="0" startY="-60" endX="0" endY="190" name="G">
+                        <GradientStop colorValue="FF171226" position="0"/>
+                        <GradientStop colorValue="FF07050C" position="1"/>
+                    </LinearGradient>
+                </Fill>
+                <Stroke thickness="2.5" join="round" name="Rim">
+                    <SolidColor colorValue="FF5E45B8" name="C"/>
+                </Stroke>
+            </Shape>
+        </Node>
+
+        <!-- ===== MOON ===== -->
+        <Shape x="405" y="95" name="Moon" id="0:62">
+            <Ellipse width="74" height="74" originX="0.5" originY="0.5" name="Path"/>
+            <Fill name="Fill"><SolidColor colorValue="FFF2EBD0" name="C"/></Fill>
+        </Shape>
+        <Shape x="405" y="95" name="Moon Glow" id="0:63">
+            <Ellipse width="260" height="260" originX="0.5" originY="0.5" name="Path"/>
+            <Fill name="Fill">
+                <RadialGradient startX="0" startY="0" endX="130" endY="0" name="G">
+                    <GradientStop colorValue="99D5CCFF" position="0.25"/>
+                    <GradientStop colorValue="00D5CCFF" position="1"/>
+                </RadialGradient>
+            </Fill>
+        </Shape>
+
+        <!-- ===== WGSL FOG (fogfx.wgsl via fog.luau) ===== -->
+        <LayoutComponent width="500" height="500" styleId="0:101" name="Fog Layer" id="0:100">
+            <LayoutComponentStyle layoutWidthScaleType="fill" layoutHeightScaleType="fill" widthUnitsValue="auto" heightUnitsValue="auto" name="Fog Style" id="0:101"/>
+            <ScriptedLayout scriptAssetId="0:80" name="Fog" id="0:102">
+                <ScriptInputBoolean propertyValue="false" name="scared">
+                    <DataBindContext sourcePathIds="0:90-0:92" propertyKey="245"/>
+                </ScriptInputBoolean>
+            </ScriptedLayout>
+        </LayoutComponent>
+
+        <!-- ===== SKY / ROOM ===== -->
+        <Shape x="250" y="250" name="Backdrop">
+            <Rectangle width="500" height="500" originX="0.5" originY="0.5" name="Path"/>
+            <Fill name="Fill">
+                <RadialGradient startX="0" startY="20" endX="330" endY="20" name="G">
+                    <GradientStop colorValue="FF2A1B4D" position="0"/>
+                    <GradientStop colorValue="FF120A24" position="0.55"/>
+                    <GradientStop colorValue="FF05030A" position="1"/>
+                </RadialGradient>
+            </Fill>
+        </Shape>
+
+        <!-- ===== STATE MACHINE ===== -->
+        <StateMachine name="State Machine 1" id="0:7">
+            <StateMachineListenerSingle targetId="0:22" listenerTypeValue="enter" name="Hover In">
+                <ListenerViewModelChange>
+                    <BindablePropertyBoolean propertyValue="true">
+                        <DataBindContext sourcePathIds="0:90-0:92" propertyKey="634" direction="true"/>
+                    </BindablePropertyBoolean>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+            <StateMachineListenerSingle targetId="0:22" listenerTypeValue="exit" name="Hover Out">
+                <ListenerViewModelChange>
+                    <BindablePropertyBoolean propertyValue="false">
+                        <DataBindContext sourcePathIds="0:90-0:92" propertyKey="634" direction="true"/>
+                    </BindablePropertyBoolean>
+                </ListenerViewModelChange>
+            </StateMachineListenerSingle>
+
+            <StateMachineLayer name="Layer 1" id="0:8">
+                <AnyState x="200" y="-160"/>
+                <ExitState x="400" y="-160"/>
+                <EntryState x="0" y="0">
+                    <StateTransition stateToId="0:12"/>
+                </EntryState>
+                <AnimationState x="200" y="0" animationId="0:6" id="0:12">
+                    <StateTransition stateToId="0:13" duration="120">
+                        <TransitionViewModelCondition opValue="equal">
+                            <TransitionPropertyViewModelComparator>
+                                <BindablePropertyBoolean>
+                                    <DataBindContext sourcePathIds="0:90-0:92" propertyKey="634"/>
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="true"/>
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+                <AnimationState x="420" y="100" animationId="0:10" id="0:13">
+                    <StateTransition stateToId="0:12" duration="300">
+                        <TransitionViewModelCondition opValue="equal">
+                            <TransitionPropertyViewModelComparator>
+                                <BindablePropertyBoolean>
+                                    <DataBindContext sourcePathIds="0:90-0:92" propertyKey="634"/>
+                                </BindablePropertyBoolean>
+                            </TransitionPropertyViewModelComparator>
+                            <TransitionValueBooleanComparator value="false"/>
+                        </TransitionViewModelCondition>
+                    </StateTransition>
+                </AnimationState>
+            </StateMachineLayer>
+        </StateMachine>
+
+        <!-- ===== ANIMATIONS ===== -->
+        <LinearAnimation loopValue="loop" duration="240" name="Idle" id="0:6">
+            <!-- float up and down -->
+            <KeyedObject objectId="0:20">
+                <KeyedProperty property="y">
+                    <KeyFrameDouble value="300" frame="0" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="286" frame="120" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="300" frame="240" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <!-- head sways -->
+            <KeyedObject objectId="0:30">
+                <KeyedProperty property="rotation">
+                    <KeyFrameDouble value="-0.05" frame="0" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="0.06" frame="120" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="-0.05" frame="240" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <!-- arms swing -->
+            <KeyedObject objectId="0:70">
+                <KeyedProperty property="rotation">
+                    <KeyFrameDouble value="0.05" frame="0" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="-0.08" frame="120" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="0.05" frame="240" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:71">
+                <KeyedProperty property="rotation">
+                    <KeyFrameDouble value="-0.05" frame="0" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="0.08" frame="120" interpolationType="cubic">
+                        <CubicEaseInterpolator x1="0.42" y1="0" x2="0.58" y2="1"/>
+                    </KeyFrameDouble>
+                    <KeyFrameDouble value="-0.05" frame="240" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <!-- blink: twice per loop -->
+            <KeyedObject objectId="0:41">
+                <KeyedProperty property="scaleY">
+                    <KeyFrameDouble value="1" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="84" interpolationType="linear"/>
+                    <KeyFrameDouble value="0.06" frame="90" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="97" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="200" interpolationType="linear"/>
+                    <KeyFrameDouble value="0.06" frame="205" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="212" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:42">
+                <KeyedProperty property="scaleY">
+                    <KeyFrameDouble value="1" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="84" interpolationType="linear"/>
+                    <KeyFrameDouble value="0.06" frame="90" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="97" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="200" interpolationType="linear"/>
+                    <KeyFrameDouble value="0.06" frame="205" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="212" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <!-- eye glow pulse -->
+            <KeyedObject objectId="0:43">
+                <KeyedProperty property="opacity">
+                    <KeyFrameDouble value="0.55" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="120" interpolationType="linear"/>
+                    <KeyFrameDouble value="0.55" frame="240" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:44">
+                <KeyedProperty property="opacity">
+                    <KeyFrameDouble value="0.55" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="1" frame="120" interpolationType="linear"/>
+                    <KeyFrameDouble value="0.55" frame="240" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <!-- fog drifts -->
+            <KeyedObject objectId="0:60">
+                <KeyedProperty property="x">
+                    <KeyFrameDouble value="100" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="150" frame="120" interpolationType="linear"/>
+                    <KeyFrameDouble value="100" frame="240" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:61">
+                <KeyedProperty property="x">
+                    <KeyFrameDouble value="410" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="360" frame="120" interpolationType="linear"/>
+                    <KeyFrameDouble value="410" frame="240" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+        <LinearAnimation loopValue="loop" duration="40" name="Scare" id="0:10">
+            <KeyedObject objectId="0:20">
+                <KeyedProperty property="y">
+                    <KeyFrameDouble value="312" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="312" frame="40" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:20">
+                <KeyedProperty property="scaleX">
+                    <KeyFrameDouble value="1.0" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.2" frame="8" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.2" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:20">
+                <KeyedProperty property="scaleY">
+                    <KeyFrameDouble value="1.0" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.2" frame="8" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.2" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:30">
+                <KeyedProperty property="rotation">
+                    <KeyFrameDouble value="0" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="-0.1" frame="5" interpolationType="linear"/>
+                    <KeyFrameDouble value="0.1" frame="10" interpolationType="linear"/>
+                    <KeyFrameDouble value="-0.1" frame="15" interpolationType="linear"/>
+                    <KeyFrameDouble value="0.1" frame="20" interpolationType="linear"/>
+                    <KeyFrameDouble value="-0.1" frame="25" interpolationType="linear"/>
+                    <KeyFrameDouble value="0.1" frame="30" interpolationType="linear"/>
+                    <KeyFrameDouble value="-0.1" frame="35" interpolationType="linear"/>
+                    <KeyFrameDouble value="0" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:30">
+                <KeyedProperty property="y">
+                    <KeyFrameDouble value="-92" frame="0" interpolationType="linear"/>
+                    <KeyFrameDouble value="-98" frame="6" interpolationType="linear"/>
+                    <KeyFrameDouble value="-92" frame="12" interpolationType="linear"/>
+                    <KeyFrameDouble value="-98" frame="18" interpolationType="linear"/>
+                    <KeyFrameDouble value="-92" frame="24" interpolationType="linear"/>
+                    <KeyFrameDouble value="-98" frame="30" interpolationType="linear"/>
+                    <KeyFrameDouble value="-92" frame="36" interpolationType="linear"/>
+                    <KeyFrameDouble value="-92" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:70">
+                <KeyedProperty property="rotation">
+                    <KeyFrameDouble value="1.7" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="2.0" frame="10" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.7" frame="20" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="2.0" frame="30" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.7" frame="40" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:71">
+                <KeyedProperty property="rotation">
+                    <KeyFrameDouble value="-1.7" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="-2.0" frame="10" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="-1.7" frame="20" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="-2.0" frame="30" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="-1.7" frame="40" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:41">
+                <KeyedProperty property="scaleY">
+                    <KeyFrameDouble value="1.6" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.6" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:41">
+                <KeyedProperty property="scaleX">
+                    <KeyFrameDouble value="1.5" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.5" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:42">
+                <KeyedProperty property="scaleY">
+                    <KeyFrameDouble value="1.6" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.6" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:42">
+                <KeyedProperty property="scaleX">
+                    <KeyFrameDouble value="1.5" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.5" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:45">
+                <KeyedProperty property="scaleX">
+                    <KeyFrameDouble value="0.4" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="0.4" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:46">
+                <KeyedProperty property="scaleX">
+                    <KeyFrameDouble value="0.4" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="0.4" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:43">
+                <KeyedProperty property="opacity">
+                    <KeyFrameDouble value="1" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:44">
+                <KeyedProperty property="opacity">
+                    <KeyFrameDouble value="1" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:50">
+                <KeyedProperty property="scaleY">
+                    <KeyFrameDouble value="2.2" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.9" frame="10" interpolationType="linear"/>
+                    <KeyFrameDouble value="2.3" frame="20" interpolationType="linear"/>
+                    <KeyFrameDouble value="1.9" frame="30" interpolationType="linear"/>
+                    <KeyFrameDouble value="2.2" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:50">
+                <KeyedProperty property="scaleX">
+                    <KeyFrameDouble value="1.12" frame="0" interpolationType="cubic"><CubicEaseInterpolator x1="0.2" y1="0" x2="0.2" y2="1"/></KeyFrameDouble>
+                    <KeyFrameDouble value="1.12" frame="40" interpolationType="linear"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+    </Artboard>
+
+    <ViewModel defaultInstanceId="0:91" name="Lurker" id="0:90">
+        <ViewModelPropertyBoolean name="hover" id="0:92"/>
+        <ViewModelInstance exports="true" name="Instance" id="0:91">
+            <ViewModelInstanceBoolean propertyValue="false" viewModelPropertyId="0:92"/>
+        </ViewModelInstance>
+    </ViewModel>
+
+    <ScriptAsset file="fog.luau" name="fog" id="0:80"/>
+</Rive>
